@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="toolbar">
+         <div class="save" id="box">
+            <ul>
+                <li><button class="save-btn" id="save">&#128190;</button></li>
+                <li><button id="but">&#128194;</button></li>
+            </ul>
+            <h4>File</h4>
+        </div>
+
+        <div class="clipboard" id="box">
+            
+            <ul>
+                <li><button id="but">&#x1f4d1;</button></li>
+                <li><button id="but">&#9986;</button></li>
+                <li><button id="but">&#x1f4cb;</button></li>
+            </ul>
+            <h4>Clipboard</h4>
+        </div>
+
+
+        <div class="font_area" id="box">
+            <ul class="font_style">
+                <li><select onchange="formatText('fontName', this.value)" class="drop">
+                        <option value="Arial">Arial</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Garamond">Garamond</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="cursive">cursive</option>
+                        <option value="Cascadia Mono">Cascadia Mono</option>
+                        <option value="Franklin Gothic Book"></option>
+                    </select>
+                </li>
+                <li><select onchange="formatText('fontSize', this.value)" class="drop">
+                    <option value="1">10</option>
+                    <option value="2">12</option>
+                    <option value="3">14</option>
+                    <option value="4">16</option>
+                    <option value="5">18</option>
+                    <option value="6">20</option>
+                    <option value="7">22</option>
+                    <option value="8">24</option>
+                    <option value="9">26</option>
+                    <option value="10">28</option>
+                    <option value="11">30</option>
+                    <option value="12">32</option>
+                    <option value="13">34</option>
+                    <option value="14">36</option>
+                    <option value="15">38</option>
+                    <option value="16">40</option>
+                    <option value="17">42</option>
+                    <option value="18">44</option>
+
+                </select></li>
+                <li><button onclick="formatText('fontNameIncrease')">A+</button></li>
+                <li><button>A-</button></li>
+            </ul>
+            <ul class="font_style f_second" >
+                <li><button onclick="formatText('bold')">B</button></li>
+                <li><button onclick="formatText('italic')">I</button></li>
+                <li><button onclick="formatText('underline')">U</button></li>
+                <li><button onclick="formatText('superscript')">Sup</button></li>
+                <li><button onclick="formatText('subscript')">Sub</button></li>
+                <li><button onclick="formatText('strikethrough')">Str</button></li>
+            </ul>
+
+            <h4>Font</h4>
+        </div>
+
+
+
+
+        <div class="paragraph" id="box">
+            <ul class="li_1" >
+                <li><button onclick="formatText('insertUnorderedList')">&#x2254;</button></li>
+                <li><button onclick="formatText('insertOrderedList')">1.</button></li>
+                <li><button onclick="formatText('justifyLeft')">&#8666;</button></li>
+                <li><button onclick="formatText('justifyCenter')">&#10011;</button></li>
+                <li><button onclick="formatText('justifyRight')">&#8667;</button></li>
+                <li><button onclick="formatText('justifyFull')">&#x2263;</button></li>
+               
+            </ul>
+            <ul class="li_2">
+                <li><button onclick="undo()">&#10226;</button></li>
+                <li><button onclick="redo()">&#10227;</button></li>
+                <li><button>A<input type="color" id="foreColor" class="adv-option-button" /></button></li>
+                <li><button><input type="color" id="backColor" class="adv-option-button" />A</button></li>
+            </ul>
+            <h4>Paragraph</h4>
+        </div>
+       
+
+    </section>
+
+
+
+    <section id="textArea" contenteditable="true">
+
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

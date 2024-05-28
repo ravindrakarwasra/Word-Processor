@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(125, 171, 217);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+#toolbar{
+    height: 125px;
+    width: auto;
+    min-width: 100dvw;
+    border: none;
+    background-color: rgb(101, 130, 194);
+    position: fixed;
+    z-index: 1;
+    padding: 10px 20px;
+    padding-bottom: 20px;
+}
+#box{
+    float: left;
+}
+.clipboard{
+    width: 150px;
+    height: 100px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(172, 189, 222, 0.75);
+    border-radius: 8px;
+    position: relative;
+   text-align: center;
+   padding-top: 10px;
+   justify-content: center;
+   margin-left: 10px;
+}
+.clipboard ul{
+    list-style: none;
+    
+    
+    
+}
+.clipboard ul li{
+    display: inline-block;
+}
+#but,#save{
+    height: 50px;
+    width: 40px;
+    padding:none;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+
+}
+.clipboard h4{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 13px;
+}
+
+.font_area{
+    height: 100px;
+    width: 280px;
+    border-radius: 8px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(138, 167, 221, 0.75);
+    border: none;
+    margin-left: 10px;
+    padding: 7px 10px;
+    text-align: center;
+    
+
+    
+}
+.font_area h4{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 3px;
+}
+.font_area .font_style{
+    list-style-type: none;
+}
+.font_area .font_style li{
+    display: inline-block;
+    
+}
+.font_area button{
+    height:30px;
+    width: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+}
+.drop{
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+}
+.f_second{
+    margin-top: 5px;
+}
+
+
+.paragraph{
+    height: 100px;
+    width:250px ;
+    margin-left: 10px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(141, 170, 224, 0.75);
+    border-radius: 8px;
+    border: none;
+    padding:10px 10px;
+    text-align: center;
+}
+.paragraph ul{
+    list-style-type: none;
+}
+.paragraph ul li{
+    display: inline-block;
+   
+}
+.paragraph button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+}
+.paragraph .li_2{
+    margin-top: 4px;
+}
+
+.paragraph h4{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 3px;
+}
+.paragraph .adv-option-button{
+    width: 15px;
+    height: 15px;
+    border: none;
+    
+
+}
+.save{
+    height: 100px;
+    width: 120px;
+    border-radius: 8px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(141, 170, 224, 0.75);
+    text-align: center;
+    padding: 10px 10px;
+}
+.save h4{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 13px;
+}
+.save ul{
+    list-style: none;
+}
+.save ul li{
+    display: inline-block;
+}
+
+#textArea{
+    position: absolute;
+    width: 60dvw;
+    min-height: 700px;
+    margin: auto 285px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    padding: 80px 80px;
+    background-color: white;
+    border: solid 1px rgb(219, 219, 219);
+    box-shadow:
+  0 -3.6px 5.1px -65px rgba(0, 0, 0, 0.022),
+  0 -4.8px 12.2px -65px rgba(0, 0, 0, 0.027),
+  0 -2.7px 23px -65px rgba(0, 0, 0, 0.031),
+  0 5.1px 41.1px -65px rgba(0, 0, 0, 0.039),
+  0 24.4px 76.9px -65px rgba(0, 0, 0, 0.056),
+  0 79px 184px -65px rgba(0, 0, 0, 0.1);
+}
