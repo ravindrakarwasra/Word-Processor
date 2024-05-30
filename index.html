@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Word Processor</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
          <div class="save" id="box">
             <ul>
                 <li><button class="save-btn" id="save">&#128190;</button></li>
-                <li><button id="but">&#128194;</button></li>
+                <li><button class="save-btn" id="open">&#128194;</button></li>
             </ul>
             <h4>File</h4>
         </div>
@@ -19,9 +20,9 @@
         <div class="clipboard" id="box">
             
             <ul>
-                <li><button id="but">&#x1f4d1;</button></li>
-                <li><button id="but">&#9986;</button></li>
-                <li><button id="but">&#x1f4cb;</button></li>
+                <li><button id="copyButton" class="but">&#x1f4d1;</button></li>
+                <li><button id="cutButton" class="but">&#9986;</button></li>
+                <li><button class="but">&#x1f4cb;</button></li>
             </ul>
             <h4>Clipboard</h4>
         </div>
@@ -62,8 +63,8 @@
                     <option value="18">44</option>
 
                 </select></li>
-                <li><button onclick="formatText('fontNameIncrease')">A+</button></li>
-                <li><button>A-</button></li>
+                <li><button id="increaseTextSize">A+</button></li>
+                <li><button id="decreaseTextSize">A-</button></li>
             </ul>
             <ul class="font_style f_second" >
                 <li><button onclick="formatText('bold')">B</button></li>
@@ -93,12 +94,12 @@
             <ul class="li_2">
                 <li><button onclick="undo()">&#10226;</button></li>
                 <li><button onclick="redo()">&#10227;</button></li>
-                <li><button>A<input type="color" id="foreColor" class="adv-option-button" /></button></li>
+                <li><button>A<input type="color" id="foreColor" class="adv-option-button"  /></button></li>
                 <li><button><input type="color" id="backColor" class="adv-option-button" />A</button></li>
             </ul>
             <h4>Paragraph</h4>
         </div>
-       
+      
 
     </section>
 
