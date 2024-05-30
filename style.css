@@ -4,22 +4,25 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(125, 171, 217);
+    background:#005cac9f;
+    font-family: monospace;
 }
 
 html{
     scroll-behavior: smooth;
 }
+button:hover{
+    background-color: rgb(105, 182, 234);
+}
 #toolbar{
-    height: 125px;
+    height: 100px;
     width: auto;
     min-width: 100dvw;
     border: none;
-    background-color: rgb(101, 130, 194);
+    background: linear-gradient(90deg, #005aa7 0%, #b7efee 100%);
     position: fixed;
     z-index: 1;
-    padding: 10px 20px;
-    padding-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 #box{
     float: left;
@@ -27,15 +30,11 @@ html{
 .clipboard{
     width: 150px;
     height: 100px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(172, 189, 222, 0.75);
-    border-radius: 8px;
     position: relative;
    text-align: center;
    padding-top: 10px;
    justify-content: center;
-   margin-left: 10px;
+   border-right: 1px solid black;
 }
 .clipboard ul{
     list-style: none;
@@ -46,7 +45,7 @@ html{
 .clipboard ul li{
     display: inline-block;
 }
-#but,#save{
+.but,#save,#open{
     height: 50px;
     width: 40px;
     padding:none;
@@ -57,19 +56,13 @@ html{
 }
 .clipboard h4{
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 13px;
+    padding-top: 16px;
 }
 
 .font_area{
     height: 100px;
     width: 280px;
-    border-radius: 8px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(138, 167, 221, 0.75);
-    border: none;
-    margin-left: 10px;
+    border-right: 1px solid black;
     padding: 7px 10px;
     text-align: center;
     
@@ -78,8 +71,7 @@ html{
 }
 .font_area h4{
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 3px;
+    padding-top: 6px;
 }
 .font_area .font_style{
     list-style-type: none;
@@ -108,12 +100,7 @@ html{
 .paragraph{
     height: 100px;
     width:250px ;
-    margin-left: 10px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(141, 170, 224, 0.75);
-    border-radius: 8px;
-    border: none;
+    border-right: 1px solid black;
     padding:10px 10px;
     text-align: center;
 }
@@ -136,7 +123,6 @@ html{
 
 .paragraph h4{
     color: white;
-    font-family: 'Courier New', Courier, monospace;
     padding-top: 3px;
 }
 .paragraph .adv-option-button{
@@ -149,17 +135,13 @@ html{
 .save{
     height: 100px;
     width: 120px;
-    border-radius: 8px;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(141, 170, 224, 0.75);
+    border-right: 1px solid black;
     text-align: center;
     padding: 10px 10px;
 }
 .save h4{
     color: white;
-    font-family: 'Courier New', Courier, monospace;
-    padding-top: 13px;
+    padding-top: 16px;
 }
 .save ul{
     list-style: none;
@@ -171,10 +153,10 @@ html{
 #textArea{
     position: absolute;
     width: 60dvw;
-    min-height: 700px;
+    min-height: 80dvh;
     margin: auto 285px;
-    margin-bottom: 40px;
-    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-top: 130px;
     padding: 80px 80px;
     background-color: white;
     border: solid 1px rgb(219, 219, 219);
