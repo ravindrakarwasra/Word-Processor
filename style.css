@@ -4,70 +4,103 @@
     box-sizing: border-box;
 }
 body{
-    background:#005cac9f;
+    background:#dbe6ef9f;
     font-family: monospace;
 }
-
-html{
-    scroll-behavior: smooth;
-}
-button:hover{
-    background-color: rgb(105, 182, 234);
-}
-#toolbar{
-    height: 100px;
-    width: auto;
-    min-width: 100dvw;
-    border: none;
-    background: linear-gradient(90deg, #005aa7 0%, #b7efee 100%);
+#heading_bar{
+    height: 40px;
+    width: 100dvw;
+    background-color: #bac4cc;
     position: fixed;
+    display: flex;
+    text-transform: capitalize;
     z-index: 1;
     border-bottom: 1px solid black;
+}
+#heading_bar h2{
+    border-right: 1px solid rgb(0, 0, 0);
+    padding-right: 5px;
+    padding: 8px 10px;
+    height: 40px;
+}
+ul{
+    list-style: none;
+    
+}
+ul li{
+    display:inline-block
+}
+.heding_list{
+    padding: 8px 10px;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.heding_list li button{
+    padding: 0;
+    height: 30px;    
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+
+#header_menu{
+    height: 70px;
+    width: 100dvw;
+    background-color: #bac4cc;
+    position: fixed;
+    margin-top: 40px;
+    border-bottom: 1px solid black;
+    z-index: 1;
 }
 #box{
     float: left;
 }
 .clipboard{
-    width: 150px;
-    height: 100px;
+    width: 120px;
+    height: 70px;
     position: relative;
    text-align: center;
    padding-top: 10px;
    justify-content: center;
    border-right: 1px solid black;
+
 }
 .clipboard ul{
     list-style: none;
-    
-    
-    
 }
 .clipboard ul li{
     display: inline-block;
 }
-.but,#save,#open{
-    height: 50px;
-    width: 40px;
+#save,#open{
+    height: 30px;
+    width: 30px;
     padding:none;
     font-size: 20px;
     border-radius: 6px;
     border: none;
 
 }
+.but{
+    height: 50px;
+    width: 30px;
+    padding:none;
+    font-size: 25px;
+    border: none; 
+    background-color: transparent;
+}
 .clipboard h4{
     color: white;
-    padding-top: 16px;
+    padding-top: 6px;
 }
 
 .font_area{
-    height: 100px;
-    width: 280px;
+    height: 70px;
+    width: 150px;
     border-right: 1px solid black;
     padding: 7px 10px;
     text-align: center;
-    
-
-    
 }
 .font_area h4{
     color: white;
@@ -81,27 +114,51 @@ button:hover{
     
 }
 .font_area button{
-    height:30px;
-    width: 30px;
-    background-color: white;
+    height:25px;
+    width: 25px;
+    background-color: transparent;
     border: none;
     border-radius: 4px;
 }
 .drop{
-    height: 30px;
+    height: 25px;
     border: none;
     border-radius: 4px;
 }
+#ffamily{
+    width: 124px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0px;
+}
+#fsize{
+    width: 60px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0px;
+}
 .f_second{
-    margin-top: 5px;
+    margin-top: 3px;
+}
+
+.f_area{
+    width: 150px;
+    
+}
+.f_third button{
+    height: 25px;
+    width: 30px;
+    background-color: transparent;
+    margin-top: 2px;
+    
 }
 
 
+
 .paragraph{
-    height: 100px;
-    width:250px ;
+    height: 70px;
+    width:150px ;
     border-right: 1px solid black;
-    padding:10px 10px;
     text-align: center;
 }
 .paragraph ul{
@@ -115,16 +172,12 @@ button:hover{
     width: 30px;
     height: 30px;
     border: none;
-    border-radius: 4px;
+    background-color: transparent;
 }
 .paragraph .li_2{
     margin-top: 4px;
 }
 
-.paragraph h4{
-    color: white;
-    padding-top: 3px;
-}
 .paragraph .adv-option-button{
     width: 15px;
     height: 15px;
@@ -149,7 +202,48 @@ button:hover{
 .save ul li{
     display: inline-block;
 }
+.insert{
+    height: 70px;
+    width: 100px;
+    border-right: 1px solid black;
+    padding: 1px 7px;
+    display: flex;
+}
 
+.insert button{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    font-size: 40px;
+    
+} 
+  
+table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 40px;
+    width: 80px;
+  }
+img{
+    height: auto;
+    width: auto;
+    max-width: 50dvw;
+    max-height: 50dvh;
+}
+#insertTableButton{
+    padding-top: 13px;
+    margin-left: 5px;
+}
+#insertTableButton img{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
 #textArea{
     position: absolute;
     width: 60dvw;
