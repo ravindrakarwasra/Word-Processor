@@ -3,6 +3,9 @@ const increaseTextSizeButton = document.getElementById("increaseTextSize");
 const decreaseTextSizeButton = document.getElementById("decreaseTextSize");
 const textArea = document.getElementById("textArea");
 const cutButton = document.getElementById("cutButton");
+const toolbar = document.getElementsByClassName("insert");
+const uploadButton = document.getElementById("upload");
+
 
 function formatText(command, value=null){
     document.execCommand(command,false,value);
@@ -81,3 +84,70 @@ cutButton.addEventListener("click", async () => {
     console.error('Failed to copy: ', err);
   }
 });
+
+//insert an image
+// Add event listener to upload button
+uploadButton.addEventListener("click", () => {
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "image/*";
+
+  // Add event listener to input
+  input.addEventListener("change", () => {
+    const file = input.files[0];
+    const reader = new FileReader();
+
+    // Add event listener to reader
+    reader.addEventListener("load", () => {
+      const img = document.createElement("img");
+      img.src = reader.result;
+      textArea.appendChild(img);
+    });
+
+    // Read file
+    reader.readAsDataURL(file);
+  });
+
+  // Open file picker
+  input.click();
+});
+
+// Add event listener to toolbar buttons
+toolbar.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    const command = e.target.id;
+    document.execCommand(command);
+  }
+});
+
+
+//table
+function insertTable(){
+    console.log('insert table');
+    const rows = prompt('Enter the number of rows:');
+    const cols = prompt('Enter the number of columns:');
+
+    if (rows && cols) {
+        createTable(rows, cols);
+    }
+};
+function createTable(rows, cols) {
+    const table = document.createElement('table');
+    const tableBody = document.createElement('tbody');
+
+    for (let i = 0; i < rows; i++) {
+        const row = document.createElement('tr');
+
+    for (let j = 0; j < cols; j++) {
+        const cell = document.createElement('td');
+        cell.innerHTML = ``;
+        row.appendChild(cell);
+    }
+
+        tableBody.appendChild(row);
+    }
+
+    table.appendChild(tableBody);
+    textArea.appendChild(table);
+}
+
