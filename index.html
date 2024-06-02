@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Processor</title>
-    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="toolbar">
-         <div class="save" id="box">
-            <ul>
-                <li><button class="save-btn" id="save">&#128190;</button></li>
-                <li><button class="save-btn" id="open">&#128194;</button></li>
-            </ul>
-            <h4>File</h4>
-        </div>
-
+    <section id="heading_bar">
+        <h2>Word Processor</h2>
+        <ul class="heding_list">
+            <li><button class="save-btn" id="save">&#128190;</button></li>
+            <li><button class="save-btn" id="openButton">&#128194;</button></li>
+            <li><button onclick="undo()">&#10226;</button></li>
+            <li><button onclick="redo()">&#10227;</button></li>
+        </ul>
+    </section>
+    <section id="header_menu">
         <div class="clipboard" id="box">
             
             <ul>
@@ -24,13 +25,11 @@
                 <li><button id="cutButton" class="but">&#9986;</button></li>
                 <li><button class="but">&#x1f4cb;</button></li>
             </ul>
-            <h4>Clipboard</h4>
         </div>
-
 
         <div class="font_area" id="box">
             <ul class="font_style">
-                <li><select onchange="formatText('fontName', this.value)" class="drop">
+                <li><select onchange="formatText('fontName', this.value)" class="drop" id="ffamily">
                         <option value="Arial">Arial</option>
                         <option value="Times New Roman">Times New Roman</option>
                         <option value="Verdana">Verdana</option>
@@ -42,7 +41,9 @@
                         <option value="Franklin Gothic Book"></option>
                     </select>
                 </li>
-                <li><select onchange="formatText('fontSize', this.value)" class="drop">
+               </ul>
+            <ul class="font_style f_second" >
+                <li><select onchange="formatText('fontSize', this.value)" class="drop" id="fsize">
                     <option value="1">10</option>
                     <option value="2">12</option>
                     <option value="3">14</option>
@@ -66,7 +67,9 @@
                 <li><button id="increaseTextSize">A+</button></li>
                 <li><button id="decreaseTextSize">A-</button></li>
             </ul>
-            <ul class="font_style f_second" >
+        </div>
+        <div class="font_area f_area" id="box">
+            <ul class="font_style f_third" >
                 <li><button onclick="formatText('bold')">B</button></li>
                 <li><button onclick="formatText('italic')">I</button></li>
                 <li><button onclick="formatText('underline')">U</button></li>
@@ -74,43 +77,38 @@
                 <li><button onclick="formatText('subscript')">Sub</button></li>
                 <li><button onclick="formatText('strikethrough')">Str</button></li>
             </ul>
-
-            <h4>Font</h4>
         </div>
-
-
-
 
         <div class="paragraph" id="box">
             <ul class="li_1" >
                 <li><button onclick="formatText('insertUnorderedList')">&#x2254;</button></li>
                 <li><button onclick="formatText('insertOrderedList')">1.</button></li>
+                <li><button>A<input type="color" id="foreColor" class="adv-option-button"  /></button></li>
+                <li><button><input type="color" id="backColor" class="adv-option-button" />A</button></li>
+            </ul>
+            <ul class="li_2">
                 <li><button onclick="formatText('justifyLeft')">&#8666;</button></li>
                 <li><button onclick="formatText('justifyCenter')">&#10011;</button></li>
                 <li><button onclick="formatText('justifyRight')">&#8667;</button></li>
                 <li><button onclick="formatText('justifyFull')">&#x2263;</button></li>
-               
             </ul>
-            <ul class="li_2">
-                <li><button onclick="undo()">&#10226;</button></li>
-                <li><button onclick="redo()">&#10227;</button></li>
-                <li><button>A<input type="color" id="foreColor" class="adv-option-button"  /></button></li>
-                <li><button><input type="color" id="backColor" class="adv-option-button" />A</button></li>
-            </ul>
-            <h4>Paragraph</h4>
         </div>
-      
-
+        <div class="insert" id="box" title="Insert">
+                
+            
+                <button id="upload" title="Picture">🖼</button>
+                <button id="insertTableButton" onclick="insertTable()" title="Table"><img src="table.png" alt=""></button>
+               
+              
+        </div>
     </section>
-
-
-
     <section id="textArea" contenteditable="true">
 
     </section>
-
-
-
+     
+   
+  
     <script src="app.js"></script>
+    
 </body>
 </html>
