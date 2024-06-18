@@ -8,7 +8,6 @@
     --color_2:#E6E6E6;
     --color_3:#F3F3F3;
     --color_4:#4280dd;
-   
 }
 body{
     background:var(--color_2);
@@ -38,7 +37,6 @@ body{
 }
 ul{
     list-style: none;
-    
 }
 ul li{
     display:inline-block
@@ -51,11 +49,9 @@ ul li{
     padding: 0;
     height: 40px;    
     width: 40px;
-    
     background-color: transparent;
     border: none;
     font-size: 25px;
-
 
 }
 #header_menu{
@@ -86,10 +82,6 @@ ul li{
 }
 .clipboard ul li{
     display: inline-block;
-}
-.clipboard ul li button{
-
-
 }
 .but{
     height: 50px;
@@ -179,7 +171,6 @@ ul li{
 }
 .paragraph ul li{
     display: inline-block;
-   
 }
 .paragraph button{
     width: 30px;
@@ -302,8 +293,6 @@ ul li{
     border-top: 3px solid rgb(0, 0, 0);
     border-bottom: 3px solid rgb(0, 0, 0);
 }
-
-
 .insert{
     height: 78px;
     width: auto;
@@ -344,8 +333,6 @@ img{
     margin-left: 10px;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 5px;
-
-
 }
 .table{
     height: 35px;
@@ -374,8 +361,6 @@ img{
     z-index: 99;
     transform: rotate(-90deg);
 }
-
-
 .pageco{
     height: 38px;
     width:30px;
@@ -390,7 +375,6 @@ img{
     padding: 5px;
     margin-top: 11px;
     margin-left: 6px;
-    
 }
 .pagein{
     height: 38px;
@@ -425,9 +409,6 @@ img{
     background-color: transparent;
     border: 3px solid rgb(255, 0, 0);
 }
-
-
-  
 .orientation{
     width: 240px;
     height: 78px;
@@ -466,8 +447,6 @@ img{
     color: #000000;
     text-decoration: none;
 }
-
-
 #size-menu ul {
     position: absolute;
     top: 100%;
@@ -479,11 +458,9 @@ img{
     display: none;
 }
 
-
 #size-menu ul li {
     display: block;
 }
-
 
 #size-menu ul button {
     width: 80px;
@@ -492,8 +469,6 @@ img{
     background-color: transparent;
     color: white;
 }
-
-
 #size-menu li:hover > ul {
     display: block;
 }
@@ -530,7 +505,6 @@ img{
 }
 .find_text button:hover{
     background-color: #c0c0c0;
-    
 }
 #textArea{
     position: absolute;
