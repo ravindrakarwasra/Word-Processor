@@ -8,25 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="heading_bar">
-        <h2>Word Processor</h2>
-        <ul class="heding_list">
-            <li><button class="save-btn" id="save">&#128190;</button></li>
-            <li><button class="save-btn" id="openButton">&#128194;</button></li>
-            <li><button onclick="undo()">&#10226;</button></li>
-            <li><button onclick="redo()">&#10227;</button></li>
-        </ul>
+    <header>
+        <!--Heading bar-->
+        <section id="heading_bar">
+            <ul class="heding_list">
+                <li><button class="save-btn" id="save" title="Save">&#128190;</button></li>
+                <li><button class="save-btn" id="loadDocButton" title="Open">&#128194;</button></li>
+                <li><button onclick="undo()" title="Undo">&#10226;</button></li>
+                <li><button onclick="redo()" title="Redo">&#10227;</button></li>
+            </ul>
+    </header>
     </section>
     <section id="header_menu">
         <div class="clipboard" id="box">
-            
             <ul>
                 <li><button id="copyButton" class="but">&#x1f4d1;</button></li>
-                <li><button id="cutButton" class="but">&#9986;</button></li>
-                <li><button class="but">&#x1f4cb;</button></li>
+                <li><button id="cutBtn" class="but">&#9986;</button></li>
+                <li><button id="pasteButton" class="but">&#x1f4cb;</button></li>
             </ul>
         </div>
-
         <div class="font_area" id="box">
             <ul class="font_style">
                 <li><select onchange="formatText('fontName', this.value)" class="drop" id="ffamily">
@@ -38,11 +38,11 @@
                         <option value="Courier New">Courier New</option>
                         <option value="cursive">cursive</option>
                         <option value="Cascadia Mono">Cascadia Mono</option>
-                        <option value="Franklin Gothic Book"></option>
+                        <option value="Franklin Gothic Book">Franklin Gothic Book</option>
+                        <option value="Vivaldi">Vivaldi</option>
+                        <option value="Algerian">Algerian</option>
                     </select>
                 </li>
-               </ul>
-            <ul class="font_style f_second" >
                 <li><select onchange="formatText('fontSize', this.value)" class="drop" id="fsize">
                     <option value="1">10</option>
                     <option value="2">12</option>
@@ -62,53 +62,84 @@
                     <option value="16">40</option>
                     <option value="17">42</option>
                     <option value="18">44</option>
-
                 </select></li>
                 <li><button id="increaseTextSize">A+</button></li>
                 <li><button id="decreaseTextSize">A-</button></li>
+               </ul>
+            <ul class="font_style f_second" >
+                <li><button onclick="formatText('bold')"><b>B</b></button></li>
+                <li><button onclick="formatText('italic')"><i>I</i></button></li>
+                <li><button onclick="formatText('underline')"><u>U</u></button></li>
+                <li><button onclick="formatText('superscript')">X<sup>2</sup></button></li>
+                <li><button onclick="formatText('subscript')">X<sub>2</sub></button></li>
+                <li><button onclick="formatText('strikethrough')"><s>S</s></button></li>
+                <li><button title="Font Color" id="f_col_button">A<input type="color" id="foreColor" class="adv-option-button"  /></button></li>
+                <li><button title="Highlight" id="highlighter">H<input type="color" id="backColor" class="adv-option-button" /></button></li>
             </ul>
         </div>
-        <div class="font_area f_area" id="box">
-            <ul class="font_style f_third" >
-                <li><button onclick="formatText('bold')">B</button></li>
-                <li><button onclick="formatText('italic')">I</button></li>
-                <li><button onclick="formatText('underline')">U</button></li>
-                <li><button onclick="formatText('superscript')">Sup</button></li>
-                <li><button onclick="formatText('subscript')">Sub</button></li>
-                <li><button onclick="formatText('strikethrough')">Str</button></li>
-            </ul>
-        </div>
-
         <div class="paragraph" id="box">
             <ul class="li_1" >
                 <li><button onclick="formatText('insertUnorderedList')">&#x2254;</button></li>
                 <li><button onclick="formatText('insertOrderedList')">1.</button></li>
-                <li><button>A<input type="color" id="foreColor" class="adv-option-button"  /></button></li>
-                <li><button><input type="color" id="backColor" class="adv-option-button" />A</button></li>
+                <li></li>
             </ul>
             <ul class="li_2">
-                <li><button onclick="formatText('justifyLeft')">&#8666;</button></li>
-                <li><button onclick="formatText('justifyCenter')">&#10011;</button></li>
-                <li><button onclick="formatText('justifyRight')">&#8667;</button></li>
-                <li><button onclick="formatText('justifyFull')">&#x2263;</button></li>
+                <li><button onclick="formatText('justifyLeft')"><div class="left"></div></button></li>
+                <li><button onclick="formatText('justifyCenter')"><div class="centre"></div></button></li>
+                <li><button onclick="formatText('justifyRight')"><div class="right"></div></button></li>
+                <li><button onclick="formatText('justifyFull')"><div class="just"></div></button></li>
             </ul>
         </div>
         <div class="insert" id="box" title="Insert">
-                
-            
-                <button id="upload" title="Picture">🖼</button>
-                <button id="insertTableButton" onclick="insertTable()" title="Table"><img src="table.png" alt=""></button>
-               
-              
+            <button id="upload" title="Picture">🖼</button>
+            <button id="insertTableButton" onclick="insertTable()" title="Table"><div class="table"></div></button>   
+            <div class="colorChange">
+                <div class="pageco" title="Page Color">
+                    <button id="colorButton"></button>
+                    <input type="color" name="" id="colorInput">
+                </div>
+            </div>
+            <div class="pageBorder">
+                <div class="pagein">
+                    <button id="addBorderButton" title="Page Border"></button>
+                </div>
+            </div>   
+        </div>
+        <div class="orientation" id="box">
+            <button onclick="portrait()" title="Portrait">&#128196</button>
+            <button onclick="landscape()" title="Landscape">&#128240</button>
+            <button onclick="margin()" style="color: white;" title="Margin" id="mar_btn"><div class="margin"></div></button>
+            <ul id="size-menu">
+                <li><h4>Size</h4>
+                    <ul>
+                        <li><button onclick="letter()">Letter</button></li>
+                        <li><button onclick="tabloid()">Tabloid</button></li>
+                        <li><button onclick="legal()">Legal</b utton></li>
+                        <li><button onclick="a3()">A3</button></li>
+                        <li><button onclick="a4()">A4</button></li>
+                        <li><button onclick="a5()">A5</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="find_text">
+            <ul>
+                <li><button id="searchButton" title="Find"> &#128270; Find</button></li>
+                <li><button id="replaceButton" title="Replace"> &#65533;Replace</button></li>
+                <li><button onclick="link()" title="Link"> &#128279;Link</button></li>
+            </ul>
         </div>
     </section>
-    <section id="textArea" contenteditable="true">
-
-    </section>
-     
-   
-  
-    <script src="app.js"></script>
     
+    <section id="textArea" class="tarea" contenteditable="true">
+    </section>
+
+    <section id="foot" >
+        <div class="w-counter">
+            <p id="count">Words: 0</p>
+        </div>
+    </section>
+
+<script src="app.js"></script>
 </body>
 </html>
