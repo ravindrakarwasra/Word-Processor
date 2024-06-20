@@ -91,26 +91,60 @@
             </ul>
         </div>
         <div class="insert" id="box" title="Insert">
-            <button id="upload" title="Picture">🖼</button>
-            <button id="insertTableButton" onclick="insertTable()" title="Table"><div class="table"></div></button>   
-            <div class="colorChange">
-                <div class="pageco" title="Page Color">
-                    <button id="colorButton"></button>
-                    <input type="color" name="" id="colorInput">
+            <button id="upload" title="Picture">
+                <div class="frame">
+                    <div class="internal_picture">
+        
+                    </div>
                 </div>
-            </div>
-            <div class="pageBorder">
-                <div class="pagein">
-                    <button id="addBorderButton" title="Page Border"></button>
+                <h6>Picture</h6>
+            </button>
+            <button id="insertTableButton" onclick="insertTable()" title="Table">
+                <div class="tablebox">
+                    <div class="tableLines">
+        
+                    </div>
                 </div>
-            </div>   
+                <h6>Table</h6>
+            </button> 
+          
+            <button id="colorButton" title="Page Color">
+                <input type="color" name="" id="colorInput">
+                <div class="page"></div>
+                <div class="bucket"></div>
+                <h6>Color</h6>
+            </button>
+
+
+            <button id="addBorderButton"> 
+                <div class="border_page">
+                    <div class="border"></div>
+                </div>
+                <h6>Border</h6>
+            </button> 
         </div>
+
+
         <div class="orientation" id="box">
-            <button onclick="portrait()" title="Portrait">&#128196</button>
-            <button onclick="landscape()" title="Landscape">&#128240</button>
-            <button onclick="margin()" style="color: white;" title="Margin" id="mar_btn"><div class="margin"></div></button>
+            <button onclick="margin()" id="marginButton">
+                <div class="marginPage">
+                </div>
+                Margin
+            </button>
+            <button onclick="portrait()" title="Portrait" id="portrait">
+                <div class="portrait_icon">
+                    &#128196;
+                </div>
+                <p>Portrait</p>
+            </button>
+            <button onclick="landscape()" title="Landscape" id="landscape">
+                <div class="landscape_icon">
+                    &#128240;
+                </div>
+                <p>Landscape</p>
+            </button>
             <ul id="size-menu">
-                <li><h4>Size</h4>
+                <li><h4>&#128196;</h4>
                     <ul>
                         <li><button onclick="letter()">Letter</button></li>
                         <li><button onclick="tabloid()">Tabloid</button></li>
@@ -120,6 +154,7 @@
                         <li><button onclick="a5()">A5</button></li>
                     </ul>
                 </li>
+                <span>Size</span>
             </ul>
         </div>
         <div class="find_text">
@@ -134,12 +169,15 @@
     <section id="textArea" class="tarea" contenteditable="true">
     </section>
 
+
     <section id="foot" >
         <div class="w-counter">
             <p id="count">Words: 0</p>
         </div>
     </section>
 
+
 <script src="app.js"></script>
 </body>
 </html>
+
