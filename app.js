@@ -52,8 +52,6 @@ addBorderButton.addEventListener('click',()=>{
       textArea.classList.add('border-added')
   }
 })
-
-
 //background color change
 colorButton.addEventListener('click',()=>{
   colorInput.click()
@@ -218,8 +216,9 @@ function landscape(){
 }
 function portrait(){
   textArea.style.width="595px"
-  textArea.style.height="842px"
-  textArea.style.marginLeft="420px"
+  textArea.style.minHeight="842px"
+  textArea.style.height="auto"
+  textArea.style.marginLeft="445px"
 }
 function margin(){
   const top=prompt("Enter Top Margin:")
@@ -232,32 +231,38 @@ function margin(){
   textArea.style.paddingBottom=`${bottom}px`;
 } 
 function letter(){
-  textArea.style.height="1056px"
+  textArea.style.minHeight="1056px"
+  textArea.style.height="auto"
   textArea.style.width="816px"
   textArea.style.marginLeft="340px"
 }
 function tabloid(){
-  textArea.style.height="1224px"
+  textArea.style.minHeight="1224px"
+  textArea.style.height="auto"
   textArea.style.width="792px"
   textArea.style.marginLeft="360px"
 }
 function legal(){
-  textArea.style.height="1008px"
+  textArea.style.minHeight="1008px"
+  textArea.style.height="auto"
   textArea.style.width="612px"
   textArea.style.marginLeft="410px"
 }
 function a3(){
-  textArea.style.height="1191px"
+  textArea.style.minHeight="1191px"
+  textArea.style.height="auto"
   textArea.style.width="842px"
   textArea.style.marginLeft="330px"
 }
 function a4(){
-  textArea.style.height="842px"
+  textArea.style.minHeight="842px"
+  textArea.style.height="auto"
   textArea.style.width="595px"
   textArea.style.marginLeft="420px"
 }
 function a5(){
-  textArea.style.height="595px"
+  textArea.style.minHeight="595px"
+  textArea.style.height="auto"
   textArea.style.width="420px"
   textArea.style.marginLeft="530px"
 }
