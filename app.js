@@ -278,3 +278,9 @@ function link(){
       range.insertNode(link)
   }
 }
+functions savePdf(){
+  const printWindow = window.open('','','height=auto','width=auto')
+printWindow.document.write(textArea.outerHTML)
+printWindow.document.close()
+print window.print()
+}
